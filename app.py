@@ -5,7 +5,7 @@ import torch
 # Cache the model and tokenizer to avoid reloading
 @st.cache_resource
 def load_model():
-    model_path = "C:\\Users\\Admin\\forex-sentiment-analysis\\models\\forex_analysis_model"
+    model_path = "C:\\Users\\Admin\\forex-sentiment-analysis-application\\models\\forex-analysis-model"
     tokenizer = XLNetTokenizer.from_pretrained("xlnet-large-cased")
     model = XLNetForSequenceClassification.from_pretrained(model_path)
     model.eval()  # Set model to evaluation mode
